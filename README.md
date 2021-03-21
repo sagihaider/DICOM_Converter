@@ -7,5 +7,12 @@ Based on OSI (an ISO standard), it is associated with major medical equipment br
 There are two information levels defined by the DICOM standard: the object-oriented tag-structured DICOM File 
 and DICOM Network Protocols, which is intended for data transmission. 
 
-Using this package you can covert your <.DICOM> images to any of the following:
+Using this package you can covert your `.DICOM` images to any of the following: 
+
+1. `png`
+2. `bmp`
+3. `jpg`
+4. `png`
+5. `tiff`
+6. `gif`
  
