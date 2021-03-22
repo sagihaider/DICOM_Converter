@@ -14,7 +14,7 @@ clc;
 clear all;
 
 %% Choose image output type: png,bmp,jpg,gif
-imgTypeOut = 'gif';
+imgTypeOut = 'png';
 pathout = ['/' imgTypeOut '/'];% output directory
 
 %% Read Current folder
