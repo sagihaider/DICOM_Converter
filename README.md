@@ -12,7 +12,5 @@ Using this package you can covert your `.DICOM` images to any of the following:
 1. `png`
 2. `bmp`
 3. `jpg`
-4. `png`
-5. `tiff`
-6. `gif`
+4. `gif`
  
