@@ -29,16 +29,13 @@ if(imagetype == 'png')
 imwrite(dcmImagei,outname, imagetype);% Save Image to specified image type
 display('Finished saving .png image');
 elseif(imagetype == 'bmp')
-imwrite(dcmImagei,'HU_dcmImage.bmp', imagetype);
+imwrite(dcmImagei,outname, imagetype);
 display('Finished saving .bmp image');
 elseif(imagetype == 'jpg')
-imwrite(dcmImagei,'HU_dcmImage.jpg', imagetype);
+imwrite(dcmImagei,outname, imagetype);
 display('Finished saving .jpg image');
-elseif(imagetype == 'tif')
-imwrite(dcmImagei,'HU_dcmImage.tif', imagetype);
-display('Finished saving .tif image');
 elseif(imagetype == 'gif')
-imwrite(dcmImagei,'HU_dcmImage.gif', imagetype);
+imwrite(dcmImagei,outname, imagetype);
 display('Finished saving .gif image');
 else
 Display('Saving error');

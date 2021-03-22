@@ -1,4 +1,4 @@
-% Conert DICOM images from any of the formats:png,bmp,jpg,png,tiff,gif
+% Conert DICOM images from any of the formats:png,bmp,jpg,gif
 
 % Code by @ Dr Haider Raza
 % Lecturer in School of Computing and Electronics Engineering, 
@@ -11,30 +11,31 @@
 %%
 close all;
 clc;
-clear all
+clear all;
+
+%% Choose image output type: png,bmp,jpg,gif
+imgTypeOut = 'gif';
+pathout = ['/' imgTypeOut '/'];% output directory
 
 %% Read Current folder
 pwd
-currentFolder = pwd % Get current path (working directory)
-pathin = '/IMG_DICOM/'; % data directory
+currentFolder = pwd; % Get current path (working directory)
+pathin = '/DICOM/'; % data directory
 pathin = fullfile(currentFolder,pathin); % combine path
-pathindir = '/IMG_DICOM/*.DCM'; % search specific data type (*.DCM)
+pathindir = '/DICOM/*.DCM'; % search specific data type (*.DCM)
 pathindir = fullfile(currentFolder,pathindir);% combine path
-pathout = '/IMG_PNG/'; % output directory
 pathout=fullfile(currentFolder,pathout);
-
 if ~exist(pathout, 'dir')
     mkdir(pathout);
 end
-
 
 Files=dir(pathindir);
 for k=1:length(Files)
    FileNames=Files(k).name
    filename = fullfile(pathin, FileNames);
-   outfileName = strrep(FileNames,'DCM','PNG');
+   outfileName = strrep(FileNames,'DCM', imgTypeOut);
    outname = fullfile(pathout,outfileName);
-   dicom2image(filename,'png',outname)
+   dicom2image(filename, imgTypeOut, outname)
 end
 
 close all;
